@@ -49,7 +49,6 @@ func ListenIPs() {
 		}
 	}
 
-	// Detecta desconexões
 	detectDisconnections(currentDevices)
 
 	// Atualiza o estado atual dos dispositivos conectados
@@ -60,7 +59,6 @@ func ListenIPs() {
 	}
 }
 
-// detectDisconnections verifica se algum dispositivo foi desconectado
 func detectDisconnections(currentDevices map[string]string) {
 	for mac, ip := range connectedDevices {
 		if currentDevices[mac] == "" {
